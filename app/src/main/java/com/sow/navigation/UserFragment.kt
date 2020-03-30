@@ -27,7 +27,7 @@ class UserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        name.text = args.name
+        name.text = "${args.user.name}, ${args.user.age} " 
 
         navigateUp.setOnClickListener{
             findNavController().navigateUp()

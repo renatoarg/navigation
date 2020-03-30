@@ -26,7 +26,11 @@ class HomeFragment : Fragment() {
 
         navigate.setOnClickListener{
             val nameStr = name.text.toString()
-            val action = HomeFragmentDirections.actionHomeFragmentToUserFragment(nameStr)
+            val ageInt = age.text.toString().toInt()
+
+            val user = User(nameStr, ageInt)
+
+            val action = HomeFragmentDirections.actionHomeFragmentToUserFragment(user)
             findNavController().navigate(action)
         }
     }

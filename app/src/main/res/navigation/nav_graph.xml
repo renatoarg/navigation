@@ -20,7 +20,7 @@
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" >
         <argument
-            android:name="name"
-            app:argType="string" />
+            android:name="user"
+            app:argType="com.sow.navigation.User" />
     </fragment>
 </navigation>
