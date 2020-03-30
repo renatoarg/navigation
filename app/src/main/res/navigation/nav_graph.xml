@@ -18,5 +18,9 @@
         android:id="@+id/userFragment"
         android:name="com.sow.navigation.UserFragment"
         android:label="fragment_user"
-        tools:layout="@layout/fragment_user" />
+        tools:layout="@layout/fragment_user" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 </navigation>

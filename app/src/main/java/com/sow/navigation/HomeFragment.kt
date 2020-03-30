@@ -24,13 +24,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnNavigateToUserFragment.setOnClickListener{
-
-            findNavController().navigate(R.id.action_homeFragment_to_userFragment)
-
+        navigate.setOnClickListener{
+            val nameStr = name.text.toString()
+            val action = HomeFragmentDirections.actionHomeFragmentToUserFragment(nameStr)
+            findNavController().navigate(action)
         }
-
-
     }
 
 }

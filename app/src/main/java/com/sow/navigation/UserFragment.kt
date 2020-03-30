@@ -6,12 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_user.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class UserFragment : Fragment() {
+
+    val args: UserFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,10 +27,10 @@ class UserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        name.text = args.name
+
         navigateUp.setOnClickListener{
-
             findNavController().navigateUp()
-
         }
 
     }
